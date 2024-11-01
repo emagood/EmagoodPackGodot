@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://capvb4718qfui"]
+
+[ext_resource type="Script" path="res://addons/Theatre/components/tool_submenu.gd" id="1_g2vws"]
+
+[node name="TheatreToolSubmenu" type="PopupMenu"]
+title = "🎭 Theatre"
+size = Vector2i(245, 151)
+visible = true
+unfocusable = true
+item_count = 1
+item_0/text = "Check for updates"
+item_0/id = 5
+script = ExtResource("1_g2vws")

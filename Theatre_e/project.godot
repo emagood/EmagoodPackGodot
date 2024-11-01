@@ -1,0 +1,50 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Theatre"
+config/description="Demo for Theatre: a text-based DIalogue plugin for Godot 4.3"
+run/main_scene="res://theatre_demo/1_intro.tscn"
+config/features=PackedStringArray("4.3")
+config/icon="res://addons/Theatre/assets/icons/Theatre.svg"
+
+[autoload]
+
+Theatre="*res://addons/Theatre/classes/Theatre.gd"
+DialogueTest="*res://tests/dialogue_test.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=0
+
+[editor]
+
+script/search_in_file_extensions=PackedStringArray("gd", "gdshader", "dlg")
+movie_writer/disable_vsync=true
+movie_writer/fps=25
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Theatre/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
+
+[internationalization]
+
+locale/translation_remaps={}
+locale/locale_filter_mode=0
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
