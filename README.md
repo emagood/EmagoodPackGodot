@@ -1,0 +1,2 @@
+# EmagoodPackGodot
+ todo plugins
