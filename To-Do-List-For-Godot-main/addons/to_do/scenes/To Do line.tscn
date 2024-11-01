@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://oxmpct2s0ts"]
+
+[ext_resource type="Script" path="res://addons/to_do/to_do_line_commands.gd" id="1"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+script = ExtResource("1")
+
+[node name="Index" type="LineEdit" parent="."]
+layout_mode = 2
+
+[node name="Function" type="LineEdit" parent="."]
+layout_mode = 2
+
+[node name="Task" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+caret_blink = true
+
+[node name="File" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Line Num" type="LineEdit" parent="."]
+layout_mode = 2
+
+[node name="Done" type="Button" parent="."]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Done"
+
+[node name="Delete" type="Button" parent="."]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Delete"
+
+[connection signal="text_changed" from="Function" to="." method="_on_function_text_changed"]
+[connection signal="text_changed" from="Task" to="." method="_on_task_text_changed"]
+[connection signal="text_submitted" from="File" to="." method="_on_file_text_submitted"]
+[connection signal="pressed" from="Done" to="." method="_on_done_pressed"]
+[connection signal="pressed" from="Delete" to="." method="_on_delete_pressed"]
